@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kery's Birthday Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Landing / Envelope Screen -->
+    <div id="landingScreen" class="landing-screen">
+        <div class="envelope-card">
+            <div class="sparkles"></div>
+            <p style="font-size: 15px;">✨ 💖 ✨</p>
+            <h1>You Have a Special Invitation!</h1>
+            <p>From Kery 💕</p>
+            <button id="openBtn" class="open-btn">OPEN 🎁</button>
+        </div>
+    </div>
+
+
+    <div id="mainContent" class="card-container hidden">
+        <!-- Floating Balloons & Streamers Container -->
+        <div class="decoration-container">
+            <div class="balloon balloon-1">🎈</div>
+            <div class="balloon balloon-2">🎈</div>
+            <div class="balloon balloon-3">🎈</div>
+            <div class="balloon balloon-4">🎈</div>
+            <div class="streamer streamer-1">🎀</div>
+            <div class="streamer streamer-2">✨</div>
+            <div class="streamer streamer-3">🎀</div>
+            <div class="streamer streamer-4">✨</div>
+        </div>
+
+        <header class="header">
+            <p class="subtitle">You are warmly invited to</p>
+            <h1 class="title">Kery's Birthday Party! 🎉</h1>
+            <div class="sparkle-container">✨ 💕 ✨</div>
+        </header>
+
+        <!-- Party Details -->
+        <section class="details-section">
+            <div class="detail-card">
+                <span class="icon">📅</span>
+                <h3>Date</h3>
+                <p>Saturday, October 24th, 2026</p>
+            </div>
+            <div class="detail-card">
+                <span class="icon">⏰</span>
+                <h3>Time</h3>
+                <p>5:00 PM onwards</p>
+            </div>
+            <div class="detail-card">
+                <span class="icon">📍</span>
+                <h3>Location</h3>
+                <p>Pink Wonderland Hall<br>123 Birthday Avenue, Sweet City</p>
+            </div>
+            <div class="detail-card">
+                <span class="icon">👗</span>
+                <h3>Dress Code</h3>
+                <p>Think Pink & Fabulous! 💕</p>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section">
+            
+            <h2>Kery's Favorite Moments 📸</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="b1.jpg" alt="Party Vibe 1">
+                    <p>young kery ✨</p>
+                </div>
+                <div class="photo-card">
+                    <img src="b2.jpg" alt="Party Vibe 2">
+                    <p>Pink Memories 💕</p>
+                </div>
+                <div class="photo-card">
+                    <img src="b3.jpg" alt="Party Vibe 3">
+                    <p>Sweet Smiles 🎈</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Cake Game Section -->
+        <section class="game-section">
+            <h2>Let's Eat the Cake Together! 🎂</h2>
+            <p class="game-subtitle">Tap/Click on the cake to take a bite!</p>
+
+            <div class="cake-box" id="cakeBox">
+                <div id="cakeDisplay" class="cake-display">🎂</div>
+                <p id="cakeStatus" class="cake-status">Full Cake (3 BITES LEFT)</p>
+            </div>
+        </section>
+        <h1 class="title">come and celebrate with me🎉<br>❀❀❀❀❀❀❀❀❀❀❀</h1>
+       
+
+        <!-- Wishes Section -->
+        <section class="wishes-section">
+            <h2>Leave Your Wishes for Kery 💖</h2>
+            <p>Send your sweet birthday messages and love below!</p>
+            
+            <form id="wishForm" class="wish-form">
+                <input type="text" id="senderName" placeholder="Your Name" required>
+                <textarea id="wishMessage" rows="3" placeholder="Write your heartfelt wish for Kery..." required></textarea>
+                <button type="submit" class="submit-btn">Send Wish ✨</button>
+            </form>
+
+            <div class="wishes-display" id="wishesDisplay">
+                <h3>Birthday Wishes Pool 🎈</h3>
+                <div id="wishesList" class="wishes-list">
+                    <div class="wish-card">
+                        <strong>kery ✨:</strong>I really hope you come to my birthday party so I can celebrate with you, my friend.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Can't wait to celebrate with you!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

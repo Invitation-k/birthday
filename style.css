@@ -1,0 +1,325 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(135deg, #ffdeeb 0%, #fbc2eb 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #4a2c40;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Landing Screen */
+.landing-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6699, #ffb3c6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.envelope-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(255, 51, 119, 0.3);
+    border: 4px solid #ff3377;
+    max-width: 400px;
+    width: 90%;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.envelope-card h1 {
+    font-size: 1.8rem;
+    color: #ff3377;
+    margin: 15px 0 5px;
+}
+
+.envelope-card p {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.open-btn {
+    background: linear-gradient(45deg, #ff3377, #ff6699);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 51, 119, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.open-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(255, 51, 119, 0.5);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* Hide Utility */
+.hidden {
+    display: none !important;
+}
+
+/* Main Card Container */
+.card-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(230, 80, 150, 0.25);
+    max-width: 650px;
+    width: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    border: 3px solid #ffb6c1;
+    position: relative;
+    z-index: 10;
+    margin: 20px auto;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Header */
+.subtitle {
+    font-size: 1.2rem;
+    color: #d85288;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8rem;
+    color: #ff3377;
+    text-shadow: 2px 2px 0px #ffe6f0;
+    margin-bottom: 10px;
+}
+
+/* Details Section */
+.details-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.detail-card {
+    background: #fff0f5;
+    padding: 15px;
+    border-radius: 16px;
+    border: 1px dashed #ff8da1;
+}
+
+.detail-card .icon { font-size: 1.8rem; }
+.detail-card h3 { color: #e6005c; font-size: 1.1rem; margin-bottom: 5px; }
+.detail-card p { font-size: 0.95rem; color: #555; }
+
+/* Photo Gallery */
+.gallery-section {
+    background: #fff6f9;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid #ffccd5;
+    margin-bottom: 30px;
+}
+
+.gallery-section h2 {
+    color: #ff1a75;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.photo-card {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 2px solid #ffdeeb;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.photo-card p {
+    font-size: 0.85rem;
+    color: #d85288;
+    font-weight: 600;
+}
+
+/* Cake Game Section */
+.game-section {
+    background: #ffe6f0;
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px dashed #ff3377;
+    margin-bottom: 30px;
+}
+
+.game-section h2 {
+    color: #ff1a75;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.game-subtitle {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.cake-box {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease;
+    box-shadow: 0 5px 15px rgba(255, 51, 119, 0.15);
+    display: inline-block;
+    min-width: 220px;
+}
+
+.cake-box:active {
+    transform: scale(0.95);
+}
+
+.cake-display {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.cake-status {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ff3377;
+}
+
+/* Wishes Section */
+.wishes-section {
+    background: #fff6f9;
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid #ffccd5;
+    margin-bottom: 20px;
+}
+
+.wishes-section h2 {
+    color: #ff1a75;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.wish-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 15px 0 25px;
+}
+
+.wish-form input, .wish-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffb3c6;
+    border-radius: 12px;
+    font-family: inherit;
+    outline: none;
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, #ff3377, #ff6699);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.wishes-list {
+    max-height: 180px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.wish-card {
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 4px solid #ff3377;
+    font-size: 0.9rem;
+}
+
+.footer {
+    color: #e6005c;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* Floating Balloons and Streamers */
+.balloon, .streamer {
+    position: absolute;
+    font-size: 2.2rem;
+    opacity: 0.8;
+    animation: floatAnim 6s infinite ease-in-out;
+    z-index: 1;
+}
+
+.balloon-1 { top: 5%; left: 3%; animation-delay: 0s; }
+.balloon-2 { top: 40%; left: 2%; animation-delay: 2s; }
+.balloon-3 { top: 10%; right: 4%; animation-delay: 4s; }
+.balloon-4 { top: 60%; right: 2%; animation-delay: 1s; }
+
+.streamer-1 { top: 25%; left: 5%; animation-delay: 1.5s; }
+.streamer-2 { top: 75%; left: 4%; animation-delay: 3s; }
+.streamer-3 { top: 30%; right: 5%; animation-delay: 0.5s; }
+.streamer-4 { top: 80%; right: 3%; animation-delay: 2.5s; }
+
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(10deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
